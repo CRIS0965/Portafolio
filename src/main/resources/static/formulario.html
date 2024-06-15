@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Esta es mi primera Pagina y mi primer comentario -->
+<html>
+    <head>
+        <title>AutosExotic</title>
+        <meta charset="UTF-8">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header class="encabezado">
+            <nav class="navegacion">
+             <a class="nav-link logo" href="index.html">AutosExotic</a>
+             <ul class="nav-menu">
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="ejemplo5.html">&triangleleft;</a></li>
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="ejemplo2.html">&triangleright;</a></li>
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="audio.html">Audios</a></li>
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="video.html">Videos</a></li>
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="iframe.html">iFrames</a></li>
+                 <li class="nav-menu-item"><a class="nav-link nav-menu-link" href="formulario.html">Formularios</a></li>
+             </ul>
+            </nav>
+        </header>
+        <aside>       
+            <h1>Formularios</h1>
+            <h2>Uso de formularios</h2>
+        </aside>
+        <section>
+            <h2>Bienes Raices</h2>
+            <article>
+                <h3>Datos de la propiedad</h3>
+                <form method="post"
+                    action="propiedad/incluir">
+                    Correo: <input type="email"
+                                   name="correo" 
+                                   value="" 
+                                   size="45" />
+                    <br/>
+                    Clave: <input type="password" 
+                                  name="clave" 
+                                  value="" 
+                                  size="10" />
+                    <br/>
+                    Area <input type="number" 
+                                  name="area" 
+                                  value="" />            
+                    <br/>
+                    <input type="submit" value="Enviar" />
+                </form>
+            </article>
+        </section>
+        <footer>
+            AutosExotic Todos los Derechos Reservados &COPY;
+        </footer>               
+    </body>
+</html>
