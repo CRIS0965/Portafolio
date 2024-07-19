@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX2BOXCR - Nosotros</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 0;
+        }
+        .navbar-brand img {
+            height: 100%;
+            max-height: 60px; /* Ajusta esto según la altura de la barra de navegación */
+            padding: 5px 0;
+        }
+        .navbar-nav .nav-link {
+            color: #E8E9EA !important;
+            background-color: #BF1111;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 15px; /* Botones redondeados */
+        }
+        .main-content {
+            background-color: #aaa;
+            color: white;
+            text-align: center; /* Centra el contenido */
+            padding: 50px;
+            height: calc(100vh - 60px); /* Resta la altura de la barra de navegación */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Centra verticalmente al fondo */
+            position: relative; /* Para posicionar el título en rojo */
+        }
+        .main-content h1 {
+            color: #E8E9EA;
+            font-weight: bold;
+            font-size: 2.5em;
+        }
+        .main-content p {
+            color: #E8E9EA;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .section-title {
+            color: #BF1111;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.5em;
+        }
+        .section-subtitle {
+            color: #E8E9EA;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto; /* Centra horizontalmente */
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            margin: 30px auto; /* Centra horizontalmente */
+        }
+        .stats .stat {
+            flex: 1;
+            text-align: center;
+        }
+        .stat-number {
+            color: #BF1111;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .stat-description {
+            color: #E8E9EA;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="https://box2boxcr.com/wp-content/uploads/elementor/thumbs/1-removebg-preview-qaituyp40c19956iltkqn1s3amujft9yhceahko1sw.png" alt="BOX2BOXCR">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Rastrear Pedidos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contáctenos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="section-title">BOX2BOXCR</div>
+        <h1>Nosotros</h1>
+        <p class="section-subtitle">
+            Somos una empresa courier que consolidamos su paquetería comprada por internet y la traemos al país por cobramos una tarifa por kilo, además transportamos su carga hasta la puerta de su casa de forma rápida, segura, y eficiente. Nos caracterizamos por tener un excelente servicio al cliente y además brindamos asesoría gratuita a nuestros clientes primerizos desde cualquier plataforma en línea que desee comprar.
+        </p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">5+</div>
+                <div class="stat-description">Años de experiencia</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1000+</div>
+                <div class="stat-description">Clientes satisfechos</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
