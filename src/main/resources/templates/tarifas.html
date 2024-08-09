@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOX2BOXCR</title>
+    <title>Tarifas - BOX2BOXCR</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -56,6 +59,29 @@
             height: auto;
             opacity: 0.4;
         }
+        .container {
+            margin-top: 20px;
+        }
+        .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .form-control {
+            border-radius: 0;
+        }
+        .input-group-text {
+            border-radius: 0;
+        }
+        .card-body {
+            padding: 20px;
+        }
         .btn-custom {
             background-color: #BF1111;
             color: #E8E9EA;
@@ -71,6 +97,18 @@
             background-color: darkred;
         }
     </style>
+    <script>
+        function calcularTarifa() {
+            var peso = parseFloat(document.getElementById('peso').value);
+            var tarifa;
+
+            // Calcular tarifa basada en el peso
+            tarifa = peso * 5000; // Cada kilo equivale a 5000 colones
+
+            // Actualizar el texto del elemento con la tarifa calculada
+            document.getElementById('tarifa').textContent = 'Tarifa estimada: ₡' + tarifa.toFixed(2);
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -92,21 +130,34 @@
     </nav>
 
     <div class="main-content">
-    <div class="text-section">
-        <h1>BOX2BOXCR</h1>
-        <p>Compra en línea y recibe tus paquetes rápido y seguro desde la comodidad de tu casa</p>
-        <div>
-            <a id="cotizar-button" class="btn-custom" href="https://api.whatsapp.com/send/?phone=50671385775" target="_blank" rel="noopener noreferrer">Cotizar</a>
-            <a id="contacto-button" class="btn-custom" href="/mi-cuenta">Tu Cuenta</a>
+        <div class="text-section">
+            <h1>Calculadora de Tarifas</h1>
+            <p>Ingresa el peso del paquete para calcular la tarifa estimada de envío.</p>
+        </div>
+        <div class="image-section">
+            <img src="https://img.freepik.com/fotos-premium/haz-lo-correcto-haz-tu-mejor-imagen-joven-repartidor-feliz-pie-paquete_386167-5891.jpg?w=996" alt="Delivery Image">
         </div>
     </div>
-    <div class="image-section">
-        <img src="https://img.freepik.com/fotos-premium/haz-lo-correcto-haz-tu-mejor-imagen-joven-repartidor-feliz-pie-paquete_386167-5891.jpg?w=996" alt="Delivery Image">
-    </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="container">
+        <div class="card animated fadeIn">
+            <div class="card-header">
+                <h4><b>Calculadora de Tarifas de Envío</b></h4>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="peso"><b>Peso del paquete (kg) *</b></label>
+                        <input type="number" class="form-control" id="peso" step="0.01" min="0" placeholder="Ingrese el peso" required>
+                        <p class="text-danger"></p>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="calcularTarifa()">Calcular Tarifa</button>
+                </form>
+                <div class="mt-3">
+                    <h5 id="tarifa">Tarifa estimada: ₡0.00</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
